@@ -373,7 +373,7 @@ const contactInfo = {
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
   // number: "+92-0000000000",
-  email_address: "my first name @ this domain"
+  email_address: "<firstname>@<firstname><lastname>.nl"
 };
 
 // Twitter Section

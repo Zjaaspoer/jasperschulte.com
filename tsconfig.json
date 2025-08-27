@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["src/*", "types/*"]
+    },
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
+    "typeRoots": ["./node_modules/@types", "./src/customLib/jasperschulte.com/types", "./src/types"]
+  },
+  "include": [
+    "src/portfolio.js",
+    "src/portfolio-validator.ts",
+    "src/customLib/jasperschulte.com/types/**/*",
+    "src/types/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
+}

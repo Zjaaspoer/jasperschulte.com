@@ -21,14 +21,16 @@
     "sass": "^1.32.8"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "start": "node fetch.js && react-scripts start",
     "build": "node fetch.js && react-scripts build",
+    "check-format": "prettier -c \"./**/*.{js,css,json,scss}\"",
+    "compile": "tsc --noEmit",
     "deploy": "gh-pages -b gh-pages -d build",
-    "test": "react-scripts test",
+    "develop": "tsc --watch --noEmit",
     "eject": "react-scripts eject",
     "format": "prettier --write \"./**/*.{js,css,json,scss}\"",
-    "check-format": "prettier -c \"./**/*.{js,css,json,scss}\""
+    "predeploy": "npm run build",
+    "start": "node fetch.js && react-scripts start",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,7 +54,10 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/react": "^18.3.24",
+    "@types/react-dom": "^18.3.7",
     "dotenv": "^8.2.0",
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.1",
+    "typescript": "^5.9.2"
   }
 }

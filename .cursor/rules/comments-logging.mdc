@@ -1,0 +1,11 @@
+---
+description: comments & logging
+alwaysApply: true
+---
+- `src/customLib/logger/logger.ts` should always be used instead of comments
+- use `logger.info` rarely
+- use `logger.verbose` for big steps
+- use `logger.silly` for very small steps or steps that repeat often (e.g. in loops)
+- comments should start in lowercase
+
+@src/customLib/logger/

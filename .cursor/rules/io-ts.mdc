@@ -1,0 +1,14 @@
+---
+description: io-ts
+globs:
+  - "**/*Schema.ts"
+alwaysApply: false
+---
+- there are a lot of `...Schema.ts` files in the project, follow the pattern of these files
+- `...Schema.ts` files should contain 3 exports:
+- an exported interface (`Todo`)
+- an exported schema (e.g. `todoSchema`)
+- an exported validator type (e.g. `export const validate: TypesAreEqual<Todo, TypeOf<typeof todoSchema>> = 'same'`)
+- the interface should never use `typeof` of a locally defined schema, it should always duplicate the typescript types
+
+@src/customLib/io-ts-custom/

@@ -1,0 +1,7 @@
+---
+description: lodash
+alwaysApply: true
+---
+- never import `chain` from `lodash-es` library but always from `src/customLib/lodash-custom/chain.ts`
+
+@src/customLib/lodash-custom/chain.ts

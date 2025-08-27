@@ -1,0 +1,5 @@
+---
+description: formatting
+alwaysApply: true
+---
+- when a block has a `// prettier-ignore` comment, the formatting in that block is formatted in a particular way and should stay that way. there is a good chance its a repeating pattern of an object, where similar keys are aligned horizontally along a vertical line

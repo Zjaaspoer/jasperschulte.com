@@ -1,0 +1,9 @@
+---
+description: fs
+alwaysApply: true
+---
+- when any of the node.js `fs` functions is used, the equivalent function in the `src/customLib/fs-custom/` customLib should be used
+- never create paths using `join()`, but use `/${directoryNameA}/${directoryNameB}/${filename}`
+- use the fs-custom function `createDirIfNeeded` if you need to potentially create a directory, so mkdir should never be needed
+
+@src/customLib/fs-custom/

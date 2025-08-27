@@ -1,0 +1,6 @@
+---
+description: coding style
+alwaysApply: true
+---
+- if looping over an array, always prefer a `for ... of` (or in case of an object, `for ... in`) loop over using `.forEach(...)` as a for loop allows for async operations
+- when creating an instance of a class, unless there are good reasons to do otherwise (e.g. multiple instances of the same class), try to name the instance the same as the class, but in camelCase

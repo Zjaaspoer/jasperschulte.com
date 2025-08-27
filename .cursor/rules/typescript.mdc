@@ -1,0 +1,5 @@
+---
+description: typescript
+alwaysApply: true
+---
+- to compile the TypeScript code, run `yarn compile`

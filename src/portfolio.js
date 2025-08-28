@@ -22,7 +22,7 @@ const illustration = {
 
 const greeting = {
   username: "jasperschulte",
-  title: "Hi all, I'm Jasper",
+  title: "Hi, I'm Jasper",
   subTitle: emoji(
     "Your next (fractional) CTO"
   ),
@@ -374,7 +374,7 @@ const contactInfo = {
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
   // number: "+92-0000000000",
-  email_address: "<firstname>@<firstname><lastname>.nl"
+  email_address: "<firstname>@<firstname><lastname>.com"
 };
 
 // Twitter Section

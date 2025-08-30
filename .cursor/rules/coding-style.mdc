@@ -4,3 +4,4 @@ alwaysApply: true
 ---
 - if looping over an array, always prefer a `for ... of` (or in case of an object, `for ... in`) loop over using `.forEach(...)` as a for loop allows for async operations
 - when creating an instance of a class, unless there are good reasons to do otherwise (e.g. multiple instances of the same class), try to name the instance the same as the class, but in camelCase
+- if creating a constant that is used in several different files, create a single file with the same name as the constant (e.g. for the constant `export const pageCount = 10`, create a file `pageCount.ts`)

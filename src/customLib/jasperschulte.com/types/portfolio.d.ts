@@ -1,234 +1,239 @@
-import { ReactElement } from 'react';
+import { ReactElement } from 'react'
 
-// Splash Screen
+// splash Screen
 export interface SplashScreen {
-  enabled: boolean;
-  animation: any; // lottie animation object
-  duration: number;
+  readonly animation: any
+  // lottie animation object
+  readonly duration: number
+  readonly enabled: boolean
 }
 
-// Illustration
+// illustration
 export interface Illustration {
-  animated: boolean;
+  readonly animated: boolean
 }
 
-// Greeting
+// greeting
 export interface Greeting {
-  username: string;
-  title: string;
-  subTitle: ReactElement;
-  resumeLink?: string;
-  displayGreeting: boolean;
+  readonly displayGreeting: boolean
+  readonly resumeLink?: string
+  readonly subTitle: ReactElement
+  readonly title: string
+  readonly username: string
 }
 
-// Social Media Links
+// social Media Links
 export interface SocialMediaLinks {
-  github?: string;
-  linkedin?: string;
-  gmail?: string;
-  gitlab?: string;
-  facebook?: string;
-  medium?: string;
-  stackoverflow?: string;
-  display: boolean;
+  readonly display: boolean
+  readonly facebook?: string
+  readonly github?: string
+  readonly gitlab?: string
+  readonly gmail?: string
+  readonly linkedin?: string
+  readonly medium?: string
+  readonly stackoverflow?: string
 }
 
-// Skills Section
+// skills Section
 export interface SoftwareSkill {
-  skillName: string;
-  fontAwesomeClassname: string;
+  readonly fontAwesomeClassname: string
+  readonly skillName: string
 }
 
 export interface SkillsSection {
-  title: string;
-  subTitle: string;
-  skills: ReactElement[];
-  softwareSkills: SoftwareSkill[];
-  display: boolean;
+  readonly display: boolean
+  readonly skills: ReactElement[]
+  readonly softwareSkills: SoftwareSkill[]
+  readonly subTitle: string
+  readonly title: string
 }
 
-// Education
+// education
 export interface School {
-  schoolName: string;
-  logo: any; // require() result
-  subHeader: string;
-  duration: string;
-  desc: string;
-  descBullets?: string[];
+  readonly desc: string
+  readonly descBullets?: string[]
+  readonly duration: string
+  readonly logo: any
+  readonly schoolName: string
+  // require() result
+  readonly subHeader: string
 }
 
 export interface EducationInfo {
-  display: boolean;
-  schools: School[];
+  readonly display: boolean
+  readonly schools: School[]
 }
 
-// Tech Stack
+// tech Stack
 export interface TechExperience {
-  Stack: string;
-  progressPercentage: string;
+  readonly progressPercentage: string
+  readonly Stack: string
 }
 
 export interface TechStack {
-  viewSkillBars: boolean;
-  experience: TechExperience[];
-  displayCodersrank: boolean;
+  readonly displayCodersrank: boolean
+  readonly experience: TechExperience[]
+  readonly viewSkillBars: boolean
 }
 
-// Work Experience
+// work Experience
 export interface WorkExperience {
-  role: string;
-  company: string;
-  companylogo: any; // require() result
-  date: string;
-  desc: string;
-  descBullets?: string[];
+  readonly company: string
+  readonly companylogo: any
+  // require() result
+  readonly date: string
+  readonly desc: string
+  readonly descBullets?: string[]
+  readonly role: string
 }
 
 export interface WorkExperiences {
-  display: boolean;
-  experience: WorkExperience[];
+  readonly display: boolean
+  readonly experience: WorkExperience[]
 }
 
-// Open Source
+// open Source
 export interface OpenSource {
-  showGithubProfile: string;
-  display: boolean;
+  readonly display: boolean
+  readonly showGithubProfile: string
 }
 
-// Big Projects
+// big Projects
 export interface Project {
-  image: any; // require() result
-  projectName: string;
-  projectDesc: string;
-  footerLink: Array<{
-    name: string;
-    url: string;
-  }>;
+  readonly footerLink: {
+    readonly name: string
+    readonly url: string
+  }[]
+  readonly image: any
+  readonly projectDesc: string
+  // require() result
+  readonly projectName: string
 }
 
 export interface BigProjects {
-  title: string;
-  subtitle: string;
-  projects: Project[];
-  display: boolean;
+  readonly display: boolean
+  readonly projects: Project[]
+  readonly subtitle: string
+  readonly title: string
 }
 
-// Achievement Section
+// achievement Section
 export interface AchievementCard {
-  title: string;
-  subtitle: string;
-  image: any; // require() result
-  imageAlt: string;
-  footerLink: Array<{
-    name: string;
-    url: string;
-  }>;
+  readonly footerLink: {
+    readonly name: string
+    readonly url: string
+  }[]
+  readonly image: any
+  // require() result
+  readonly imageAlt: string
+  readonly subtitle: string
+  readonly title: string
 }
 
 export interface AchievementSection {
-  title: ReactElement;
-  subtitle: string;
-  achievementsCards: AchievementCard[];
-  display: boolean;
+  readonly achievementsCards: AchievementCard[]
+  readonly display: boolean
+  readonly subtitle: string
+  readonly title: ReactElement
 }
 
-// Blog Section
+// blog Section
 export interface Blog {
-  url: string;
-  title: string;
-  description: string;
+  readonly description: string
+  readonly title: string
+  readonly url: string
 }
 
 export interface BlogSection {
-  title: string;
-  subtitle: string;
-  displayMediumBlogs: string;
-  blogs: Blog[];
-  display: boolean;
+  readonly blogs: Blog[]
+  readonly display: boolean
+  readonly displayMediumBlogs: string
+  readonly subtitle: string
+  readonly title: string
 }
 
-// Talk Section
+// talk Section
 export interface Talk {
-  title: string;
-  subtitle: string;
-  slides_url: string;
-  event_url: string;
+  readonly event_url: string
+  readonly slides_url: string
+  readonly subtitle: string
+  readonly title: string
 }
 
 export interface TalkSection {
-  title: string;
-  subtitle: ReactElement;
-  talks: Talk[];
-  display: boolean;
+  readonly display: boolean
+  readonly subtitle: ReactElement
+  readonly talks: Talk[]
+  readonly title: string
 }
 
-// Podcast Section
+// podcast Section
 export interface PodcastSection {
-  title: ReactElement;
-  subtitle: string;
-  podcast: string[];
-  display: boolean;
+  readonly display: boolean
+  readonly podcast: string[]
+  readonly subtitle: string
+  readonly title: ReactElement
 }
 
-// Resume Section
+// resume Section
 export interface ResumeSection {
-  title: string;
-  subtitle: string;
-  display: boolean;
+  readonly display: boolean
+  readonly subtitle: string
+  readonly title: string
 }
 
-// Contact Info
+// contact Info
 export interface ContactInfo {
-  title: ReactElement;
-  subtitle: string;
-  number?: string;
-  email_address: string;
+  readonly email_address: string
+  readonly number?: string
+  readonly subtitle: string
+  readonly title: ReactElement
 }
 
-// Twitter Details
+// twitter Details
 export interface TwitterDetails {
-  userName: string;
-  display: boolean;
+  readonly display: boolean
+  readonly userName: string
 }
 
-// Main export interface
+// main export interface
 export interface Portfolio {
-  illustration: Illustration;
-  greeting: Greeting;
-  socialMediaLinks: SocialMediaLinks;
-  splashScreen: SplashScreen;
-  skillsSection: SkillsSection;
-  educationInfo: EducationInfo;
-  techStack: TechStack;
-  workExperiences: WorkExperiences;
-  openSource: OpenSource;
-  bigProjects: BigProjects;
-  achievementSection: AchievementSection;
-  blogSection: BlogSection;
-  talkSection: TalkSection;
-  podcastSection: PodcastSection;
-  contactInfo: ContactInfo;
-  twitterDetails: TwitterDetails;
-  isHireable: boolean;
-  resumeSection: ResumeSection;
+  readonly achievementSection: AchievementSection
+  readonly bigProjects: BigProjects
+  readonly blogSection: BlogSection
+  readonly contactInfo: ContactInfo
+  readonly educationInfo: EducationInfo
+  readonly greeting: Greeting
+  readonly illustration: Illustration
+  readonly isHireable: boolean
+  readonly openSource: OpenSource
+  readonly podcastSection: PodcastSection
+  readonly resumeSection: ResumeSection
+  readonly skillsSection: SkillsSection
+  readonly talkSection: TalkSection
+  readonly socialMediaLinks: SocialMediaLinks
+  readonly splashScreen: SplashScreen
+  readonly techStack: TechStack
+  readonly twitterDetails: TwitterDetails
+  readonly workExperiences: WorkExperiences
 }
 
-// Individual exports - these declare the types for the exports from portfolio.js
-export declare const illustration: Illustration;
-export declare const greeting: Greeting;
-export declare const socialMediaLinks: SocialMediaLinks;
-export declare const splashScreen: SplashScreen;
-export declare const skillsSection: SkillsSection;
-export declare const educationInfo: EducationInfo;
-export declare const techStack: TechStack;
-export declare const workExperiences: WorkExperiences;
-export declare const openSource: OpenSource;
-export declare const bigProjects: BigProjects;
-export declare const achievementSection: AchievementSection;
-export declare const blogSection: BlogSection;
-export declare const talkSection: TalkSection;
-export declare const podcastSection: PodcastSection;
-export declare const contactInfo: ContactInfo;
-export declare const twitterDetails: TwitterDetails;
-export declare const isHireable: boolean;
-export declare const resumeSection: ResumeSection;
+// individual exports - these declare the types for the exports from portfolio.js
+export declare const illustration: Illustration
+export declare const greeting: Greeting
+export declare const socialMediaLinks: SocialMediaLinks
+export declare const splashScreen: SplashScreen
+export declare const skillsSection: SkillsSection
+export declare const educationInfo: EducationInfo
+export declare const techStack: TechStack
+export declare const workExperiences: WorkExperiences
+export declare const openSource: OpenSource
+export declare const bigProjects: BigProjects
+export declare const achievementSection: AchievementSection
+export declare const blogSection: BlogSection
+export declare const talkSection: TalkSection
+export declare const podcastSection: PodcastSection
+export declare const contactInfo: ContactInfo
+export declare const twitterDetails: TwitterDetails
+export declare const isHireable: boolean
+export declare const resumeSection: ResumeSection

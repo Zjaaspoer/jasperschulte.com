@@ -34,10 +34,10 @@ The `portfolio-validator.ts` file imports the entire export from `portfolio.js` 
 - Nested objects are properly structured
 
 ```typescript
-import * as portfolioData from "./portfolio";
-import type {Portfolio} from "./customLib/jasperschulte.com/types/portfolio";
+import * as portfolioData from './portfolio'
+import type { Portfolio } from './customLib/jasperschulte.com/types/portfolio'
 
-const portfolio: Portfolio = portfolioData; // Validates entire export
+const portfolio: Portfolio = portfolioData // Validates entire export
 ```
 
 The validator provides all the type checking we need, so no module declarations are required in the type definitions.

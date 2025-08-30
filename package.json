@@ -1,10 +1,11 @@
 {
   "homepage": "https://jasperschulte.com",
-  "name": "developerfolio",
+  "name": "jasperschulte.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "colorthief": "^2.3.0",
+    "date-fns": "2.30.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "gh-pages": "^2.1.1",
@@ -58,6 +59,6 @@
     "@types/react-dom": "^18.3.7",
     "dotenv": "^8.2.0",
     "prettier": "^2.3.1",
-    "typescript": "^5.9.2"
+    "typescript": "^4.9.5"
   }
 }

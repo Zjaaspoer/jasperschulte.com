@@ -2,8 +2,8 @@ import { ReactElement } from 'react'
 
 // splash Screen
 export interface SplashScreen {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   readonly animation: any
-  // lottie animation object
   readonly duration: number
   readonly enabled: boolean
 }
@@ -53,6 +53,7 @@ export interface School {
   readonly desc: string
   readonly descBullets?: string[]
   readonly duration: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   readonly logo: any
   readonly schoolName: string
   // require() result
@@ -79,6 +80,7 @@ export interface TechStack {
 // work Experience
 export interface WorkExperience {
   readonly company: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   readonly companylogo: any
   // require() result
   readonly date: string
@@ -104,6 +106,7 @@ export interface Project {
     readonly name: string
     readonly url: string
   }[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   readonly image: any
   readonly projectDesc: string
   // require() result
@@ -123,6 +126,7 @@ export interface AchievementCard {
     readonly name: string
     readonly url: string
   }[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   readonly image: any
   // require() result
   readonly imageAlt: string
@@ -210,9 +214,9 @@ export interface Portfolio {
   readonly podcastSection: PodcastSection
   readonly resumeSection: ResumeSection
   readonly skillsSection: SkillsSection
-  readonly talkSection: TalkSection
   readonly socialMediaLinks: SocialMediaLinks
   readonly splashScreen: SplashScreen
+  readonly talkSection: TalkSection
   readonly techStack: TechStack
   readonly twitterDetails: TwitterDetails
   readonly workExperiences: WorkExperiences

@@ -1,54 +1,176 @@
-// http://localhost:3000/
-// https://developerfolio.js.org/
-// https://jasperschulte.com/
+interface Experience {
+  readonly companyName: string
+  readonly endDate: Date | null
+  readonly highlights: string[]
+  readonly location: string | null
+  readonly role: string
+  readonly startDate: Date
+  readonly subRoleActual: string | null
+  readonly subRoleOptimized: string | null
+  readonly url: string
+}
 
-// TODO: finish my experiences
-//   also add jasperschulte.com, that never ended since 2015
-// TODO: have multiple experiences for one company collapse
-// TODO: start checking linkedin
-// TODO: create optimized subRoles
-// TODO: improve all the logos
-// TODO: workers, add a check that dates for the same company line up
-
-export const experiences = [
+export const experiences: Experience[] = [
   {
-    achievements: [],
     companyName: 'Booking.com',
     endDate: null,
-    responsibilities: [],
+    highlights: [
+      'Leader of the Web Platform & Mobile App Platform track (headcount ~150), accountable for the architecture, scalability, and developer experience of Booking.com\'s core user platforms.',
+      'Spearheaded modernization of the website and app platforms, driving improvements in performance, accessibility, and velocity across global product teams.',
+      'Led the transformation of core monolithic systems of the presentation layer, into a scalable, service-oriented architecture, enabling faster delivery, higher resilience, and long-term platform evolution.',
+      'Championed engineering excellence by embedding DORA metrics into team goals, delivering measurable gains in lead time, deployment frequency, and incident recovery.',
+      'Established a company-wide accessibility program, involving ~300 teams, ensuring full compliance with EU 2025 accessibility legislation and raising the quality bar for all product teams.',
+      'Built a culture of technical leadership and visibility, coaching top engineers to present at leading international conferences and represent Booking.com externally.',
+    ],
+    location: 'Amsterdam, NL',
     role: 'Director of Engineering',
-    startDate: new Date(2022, 7, 1),
+    startDate: new Date(2024, 1, 1),
     subRoleActual: 'Web & App Platforms',
-    subRoleOptimized: '[TODO]',
+    subRoleOptimized: 'Web Platform & Mobile App Platform',
+    url: 'https://www.booking.com',
   },
   {
-    achievements: [],
     companyName: 'Booking.com',
-    endDate: new Date(2022, 7, 1),
-    responsibilities: [],
+    endDate: new Date(2024, 0, 31),
+    highlights: [
+      'Leader of the Web Platform track (headcount ~100), responsible for unifying and evolving Booking.com\'s frontend architecture across hotels, flights, cars, and attractions.',
+      'Delivered a unified platform designed to replace fragmented vertical stacks, enabling consistent user experiences and accelerating feature rollout.',
+      'Defined and implemented long-term platform strategy, balancing innovation and reliability in one of the world\'s highest-traffic websites.',
+      'Grew and mentored distributed engineering teams across multiple regions, building future leaders and strengthening cross-site collaboration.',
+      'Raised engineering standards by introducing modern practices and frameworks, moving from ‘muddling along\' into a well-oiled engineering organization.',
+    ],
+    location: 'Amsterdam, NL',
     role: 'Director of Engineering',
     startDate: new Date(2022, 7, 1),
     subRoleActual: 'Web Core Platform',
-    subRoleOptimized: '[TODO]',
+    subRoleOptimized: 'Web Platform',
+    url: 'https://www.booking.com',
   },
   {
-    achievements: [],
-    companyName: 'Getir',
+    companyName: 'jasperschulte.com',
     endDate: null,
-    responsibilities: [],
-    role: 'Director of Engineering',
-    startDate: new Date(2022, 7, 1),
-    subRoleActual: '[TODO]',
-    subRoleOptimized: '[TODO]',
+    highlights: ['Operating via jasperschulte.com, I\'ve delivered (fractional/interim) engineering leadership for multiple organizations.'],
+    location: 'Amsterdam, NL',
+    role: '(Fractional/Interim) Engineering Leader',
+    startDate: new Date(2015, 0, 1),
+    subRoleActual: null,
+    subRoleOptimized: null,
+    url: 'https://jasperschulte.com',
   },
   {
-    achievements: [],
-    companyName: 'Getir',
+    companyName: 'Global conferences',
     endDate: null,
-    responsibilities: [],
+    highlights: [
+'CTO Craft (London, UK)',
+'AG TechFest (Utrecht, The Netherlands)',
+'Techsylvania (Cluj, Romania)',
+'JS Poland (Warsaw, Poland)',
+'CascadiaJS (Seattle, USA)',
+'Devoxx Poland (Krakow, Poland)',
+'Amsterdam JSNation (Amsterdam, The Netherlands)',
+'NationJS Frontrunners (Washington DC, USA)',
+'Codemotion Amsterdam (Amsterdam, The Netherlands)',
+    ],
+    location: null,
+    role: 'Public Speaker',
+    startDate: new Date(2019, 0, 1),
+    subRoleActual: null,
+    subRoleOptimized: null,
+    url: 'https://www.linkedin.com/in/jasperschulte/',
+  },
+  {
+    companyName: 'Getir',
+    endDate: new Date(2022, 7, 30),
+    highlights: [
+      'Daily leader of the two main Engineering tribes (headcount ~150), helped scale overal engineering organisation from ~80 to ~800 people in 14 months while establishing structure, processes, and leadership to sustain hypergrowth.',
+      'Built and led distributed teams across Europe, Asia and the US, maintaining delivery speed while navigating rapid geographic expansion.',
+      'Shipped core platform and product capabilities that enabled launches in 5 new countries within 7 months (NL, DE, ES, PT, US).',
+      'Introduced modern engineering practices and tooling, resulting in >50% faster lead times, doubled deployment frequency, and significantly reduced incident rates.',
+      'Fostered a strong culture of execution and excellence, raising the bar on quality while keeping teams focused on rapid shipping.',
+      'Continued to grow engineering hub in Amsterdam, hiring and mentoring initial leadership and establishing engineering culture and standards.',
+    ],
+    location: 'Amsterdam, NL / Istanbul, TR',
     role: 'Director of Engineering',
-    startDate: new Date(2022, 7, 1),
-    subRoleActual: '[TODO]',
-    subRoleOptimized: '[TODO]',
+    startDate: new Date(2021, 11, 1),
+    subRoleActual: 'Market tribe & Cross Domain tribe',
+    subRoleOptimized: 'Getir10 & Platform',
+    url: 'https://getir.com/en/',
+  },
+  {
+    companyName: 'Getir',
+    endDate: new Date(2021, 10, 30),
+    highlights: [
+      'Daily leader of the main platform tribe (headcount ~75), hiring and mentoring initial leadership and establishing engineering culture and standards.',
+      'Set up distributed collaboration models that enabled the company to scale internationally.',
+      'Championed continuous delivery and DevOps practices, enabling the team to ship features at high velocity during a period of extreme growth.',
+      'Established new engineering hub in Amsterdam, moving an initial group of ~30 of our top talent from Istanbul to Amsterdam.',
+    ],
+    location: 'Amsterdam, NL / Istanbul, TR',
+    role: 'Director of Engineering',
+    startDate: new Date(2021, 3, 1),
+    subRoleActual: 'Cross Domain tribe',
+    subRoleOptimized: 'Platform',
+    url: 'https://getir.com/en/',
+  },
+  {
+    companyName: 'SnappCar',
+    endDate: new Date(2021, 3, 31),
+    highlights: [
+      'Leader of the Engineering team for SnapCar\'s ride-hailing platform, responsible for product development and scaling technology.',
+      'Delivered new mobile and web experiences that drove significant user adoption in a competitive urban mobility market.',
+      'Introduced modern architecture and deployment practices, enabling the team to ship faster while improving stability.',
+      'Collaborated directly with founders on product direction and long-term technical strategy.',
+    ],
+    location: 'Utrecht, NL',
+    role: 'Chief Technology & Product Officer (CTO & CPO)',
+    startDate: new Date(2019, 11, 1),
+    subRoleActual: null,
+    subRoleOptimized: null,
+    url: 'https://www.snappcar.nl/',
+  },
+  {
+    companyName: 'TripAdvisor',
+    endDate: new Date(2020, 11, 31),
+    highlights: [
+      'Leader of the Frontend Engineering team, responsible for replatforming Tripadvisor\'s web experience.',
+      'Replatformed the frontend from legacy multi-page to a modern Single Page Application architecture, delivering major performance improvements.',
+      'Implemented service worker-based architecture, enabling offline capabilities and faster load times.',
+      'Successfully rolled out the new platform across Tripadvisor\'s three highest-traffic pages, boosting engagement and conversion rates.',
+      'Partnered with product and design to define new frontend performance standards, raising quality across the company.',
+    ],
+    location: 'Boston, USA',
+    role: 'Staff Engineer',
+    startDate: new Date(2019, 0, 1),
+    subRoleActual: 'Web Platform',
+    subRoleOptimized: null,
+    url: 'https://www.tripadvisor.com/',
+  },
+  {
+    companyName: 'GreenHome',
+    endDate: new Date(2018, 11, 31),
+    highlights: [
+      'Contributed to GreenHome\'s mission of making sustainable living accessible by delivering core frontend and backend features for the platform.',
+      'Improved platform performance and usability, supporting growth in early customer adoption.',
+    ],
+    location: 'Amsterdam, NL',
+    role: 'Chief Technology Officer (CTO)',
+    startDate: new Date(2016, 0, 1),
+    subRoleActual: null,
+    subRoleOptimized: null,
+    url: 'https://www.linkedin.com/company/greenhomenl/',
+  },
+  {
+    companyName: 'Awesome Amsterdam',
+    endDate: new Date(2015, 11, 31),
+    highlights: [
+      'Founder, responsible for product development.',
+      'Built the product and business from the ground up, gaining first-hand entrepreneurial experience in technology, marketing, and strategy.',
+    ],
+    location: 'Amsterdam, NL',
+    role: 'Founder & Chief Technology Officer (CTO)',
+    startDate: new Date(2005, 0, 1),
+    subRoleActual: null,
+    subRoleOptimized: null,
+    url: 'https://www.linkedin.com/in/jasperschulte/',
   },
 ]

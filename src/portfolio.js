@@ -3,7 +3,24 @@ import emoji from "react-easy-emoji";
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
 import {content} from "./customLib/jasperschulte.com/content";
 import {format} from "date-fns";
+// @ts-ignore - Module declaration not being picked up by TypeScript
 import {camelCase} from "lodash";
+
+// Helper function to conditionally import company logos
+// @ts-ignore - Parameter type not needed in JS file
+const getCompanyLogo = (companyName) => {
+  try {
+    return require(`./assets/images/${camelCase(companyName)}Logo.png`);
+  } catch (error) {
+    if (String(error).startsWith("Error: Cannot find module '")) {
+      console.warn(companyName)
+      console.warn(String(error))
+      // If the logo file doesn't exist, return undefined
+      return undefined;
+    }
+    throw error;
+  }
+};
 
 const portfolio = {
   illustration: {
@@ -44,10 +61,9 @@ const portfolio = {
     display: true,
     experience: content.experiences.map(e => ({
       company: e.companyName,
-      companylogo: require(`./assets/images/${camelCase(
-        e.companyName
-      )}Logo.png`),
-      desc: e.responsibilities.join("\n") + "\n" + e.achievements.join("\n"),
+      companylogo: getCompanyLogo(e.companyName),
+      desc: '',
+      descBullets: e.highlights,
       role: e.role,
       date: `${format(e.startDate, "yyyy MMMM")} - ${
         e.endDate ? format(e.endDate, "yyyy MMMM") : "Present"
@@ -67,13 +83,7 @@ const portfolio = {
   achievementSection: {
     title: emoji("Achievements"),
     subtitle: "[TODO]",
-    achievementsCards: content.achievements.map(a => ({
-      title: "[TODO]",
-      subtitle: "[TODO]",
-      image: "[TODO]",
-      imageAlt: "[TODO]",
-      footerLink: a.links
-    })),
+    achievementsCards: [],
     display: false
   },
   blogSection: {

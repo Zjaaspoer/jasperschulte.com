@@ -1,18 +1,17 @@
-import { commonQuestions } from './content/commonQuestions.js'
-import { elevatorPitch } from './content/elevatorPitch.js'
-import { experiences } from './content/experiences.js'
+import { basics } from './content/basics'
+import { certificates } from './content/certificates'
+import { commonQuestions } from './content/commonQuestions'
+import { context } from './content/context'
+import { educations } from './content/educations'
+import { experiences } from './content/experiences'
+import { pitch } from './content/pitch'
 
 export const content = {
-  achievements: [
-    {
-      image: '[TODO]',
-      imageAlt: '[TODO]',
-      links: [],
-      subtitle: '[TODO]',
-      title: '[TODO]',
-    },
-  ],
+  basics,
+  certificates,
   commonQuestions,
-  elevatorPitch,
+  context,
+  educations,
   experiences,
+  pitch,
 }

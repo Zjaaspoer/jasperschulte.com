@@ -1,5 +1,8 @@
 {
-  "name": "jasperschulte.com",
+  "dependencies": {
+    "react": "19.1.1"
+  },
+  "name": "jasperschulte-com",
   "type": "module",
   "version": "0.0.1"
 }

@@ -27,6 +27,7 @@
     "compile": "tsc --noEmit",
     "deploy": "gh-pages -b gh-pages -d build",
     "develop": "tsc --watch --noEmit",
+    "develop_cursor_web": "npx @agentdeskai/browser-tools-server@latest",
     "eject": "react-scripts eject",
     "format": "prettier --write \"./**/*.{js,css,json,scss}\"",
     "predeploy": "npm run build",

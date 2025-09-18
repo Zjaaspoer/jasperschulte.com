@@ -2,8 +2,9 @@
 description: ai code generation / refactor rules
 alwaysApply: true
 ---
+- don't just show the changes you propose in the chat, always edit files directly. if you are unable to edit files directly, let the user know
 - for every change TypeScript errors need to be checked and minimized
 - for every change ESLint errors need to be checked and minimized
 - after every change, eslint should be run with `--fix` so a lot of small errors can be fixed automatically
 - after every change, prettier should be run with `--write` so a lot of small formatting mistakes can be fixed automatically
-- first TypeScript errors should be fixed, then ESLint errors, then prettier errors
+- first TypeScript errors should be fixed, then ESLint errors, then prettier errors, finally, after fixing eslint errors, make sure no new typescript errors are introduced (if so, repeat the whole process)

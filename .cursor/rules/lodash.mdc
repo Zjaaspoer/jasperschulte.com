@@ -2,6 +2,7 @@
 description: lodash
 alwaysApply: true
 ---
+- always prefer the lodash `sortBy` function over the native `Array.prototype.sort` function
 - never import `chain` from `lodash-es` library but always from `src/customLib/lodash-custom/chain.ts`
 
 @src/customLib/lodash-custom/chain.ts

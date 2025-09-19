@@ -8,5 +8,5 @@ I left Booking in May 1st 2025 and am planning to offer my services as a Enginee
 This should provide context about
 - My background, history, experience and achievements
 - What services and value I can offer
-- What opportunitiesI am looking for`,
+- What opportunities I am looking for`,
 }

@@ -35,7 +35,7 @@ The `portfolio-validator.ts` file imports the entire export from `portfolio.js` 
 
 ```typescript
 import * as portfolioData from './portfolio'
-import type { Portfolio } from './customLib/jasperschulte.com/types/portfolio'
+import type { Portfolio } from './customLib/jasperschulte-com/types/portfolio'
 
 const portfolio: Portfolio = portfolioData // Validates entire export
 ```

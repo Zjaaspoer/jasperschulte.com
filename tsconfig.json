@@ -22,13 +22,13 @@
     "jsx": "react-jsx",
     "declaration": true,
     "declarationMap": true,
-    "typeRoots": ["./node_modules/@types", "./src/customLib/jasperschulte.com/types", "./src/types"]
+    "typeRoots": ["./node_modules/@types", "./src/customLib/jasperschulte-com/types", "./src/types"]
   },
   "include": [
     "src/portfolio.js",
     "src/portfolio_old.js",
     "src/portfolio-validator.ts",
-    "src/customLib/jasperschulte.com/types/**/*",
+    "src/customLib/jasperschulte-com/types/**/*",
     "src/types/**/*"
   ],
   "exclude": [

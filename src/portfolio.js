@@ -1,35 +1,41 @@
 import emoji from "react-easy-emoji";
 // @ts-ignore - Module declaration not being picked up by TypeScript
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
-import {content} from "./customLib/jasperschulte.com/content";
+import {content} from "./customLib/jasperschulte-com/content";
 import {format} from "date-fns";
 // @ts-ignore - Module declaration not being picked up by TypeScript
-import {camelCase} from "lodash";
+import {camelCase, chain, first, last} from "lodash";
 
 // Helper function to conditionally import company logos
 // @ts-ignore - Parameter type not needed in JS file
-const getCompanyLogo = (companyName) => {
+const getCompanyLogo = companyName => {
   try {
-    return require(`./assets/images/${camelCase(companyName)}Logo.png`);
+    return require(`./assets/images/${camelCase(companyName)}Logo.png`)
   } catch (error) {
     if (String(error).startsWith("Error: Cannot find module '")) {
       console.warn(companyName)
       console.warn(String(error))
       // If the logo file doesn't exist, return undefined
-      return undefined;
+      return undefined
     }
-    throw error;
+    throw error
   }
-};
+}
+
+const eSToDate = eS =>
+  `${format(last(eS).startDate, 'yyyy MMMM')} - ${
+    first(eS).endDate ? format(first(eS).endDate, 'yyyy MMMM') : 'Present'
+  }`
 
 const portfolio = {
   illustration: {
     animated: true
   },
   greeting: {
+    about: content.pitch.elevatorPitch,
     username: "jasperschulte",
     title: "Hi, I'm Jasper",
-    subTitle: emoji("Your next (fractional) CTO"),
+    subTitle: emoji(content.pitch.label),
     displayGreeting: true
   },
   socialMediaLinks: {
@@ -59,16 +65,20 @@ const portfolio = {
   },
   workExperiences: {
     display: true,
-    experience: content.experiences.map(e => ({
-      company: e.companyName,
-      companylogo: getCompanyLogo(e.companyName),
-      desc: '',
-      descBullets: e.highlights,
-      role: e.role,
-      date: `${format(e.startDate, "yyyy MMMM")} - ${
-        e.endDate ? format(e.endDate, "yyyy MMMM") : "Present"
-      }`
-    }))
+    experience: chain(content.experiences)
+      .orderBy(e => Number(e.startDate), 'desc')
+      .groupBy(e => e.companyName)
+      .map(eS => {
+        return {
+          company: first(eS).companyName,
+          companylogo: getCompanyLogo(first(eS).companyName),
+          desc: '',
+          descBullets: eS.flatMap(e => e.highlights),
+          role: first(eS).role,
+          date: eSToDate(eS),
+        }
+      })
+      .value(),
   },
   openSource: {
     showGithubProfile: "false",

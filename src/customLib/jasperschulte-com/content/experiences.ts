@@ -1,4 +1,4 @@
-interface Experience {
+export interface Experience {
   readonly companyName: string
   readonly endDate: Date | null
   readonly highlights: string[]
@@ -52,7 +52,7 @@ export const experiences: Experience[] = [
     highlights: [
       "Operating via jasperschulte.com, I've delivered (fractional/interim) engineering leadership for multiple organizations.",
     ],
-    location: 'Amsterdam, NL',
+    location: null,
     role: '(Fractional/Interim) Engineering Leader',
     startDate: new Date(2015, 0, 1),
     subRoleActual: null,
@@ -60,7 +60,7 @@ export const experiences: Experience[] = [
     url: 'https://jasperschulte.com',
   },
   {
-    companyName: 'Global conferences',
+    companyName: 'jasperschulte.com',
     endDate: null,
     highlights: [
       'CTO Craft (London, UK)',
@@ -82,16 +82,16 @@ export const experiences: Experience[] = [
   },
   {
     companyName: 'Getir',
-    endDate: new Date(2022, 7, 30),
+    endDate: new Date(2022, 7, 31),
     highlights: [
       'Daily leader of the two main Engineering tribes (headcount ~150), helped scale overal engineering organisation from ~80 to ~800 people in 14 months while establishing structure, processes, and leadership to sustain hypergrowth.',
       'Built and led distributed teams across Europe, Asia and the US, maintaining delivery speed while navigating rapid geographic expansion.',
       'Shipped core platform and product capabilities that enabled launches in 5 new countries within 7 months (NL, DE, ES, PT, US).',
       'Introduced modern engineering practices and tooling, resulting in >50% faster lead times, doubled deployment frequency, and significantly reduced incident rates.',
       'Fostered a strong culture of execution and excellence, raising the bar on quality while keeping teams focused on rapid shipping.',
-      'Continued to grow engineering hub in Amsterdam, hiring and mentoring initial leadership and establishing engineering culture and standards.',
+      'Established new engineering hub in Amsterdam, moving an initial group of ~30 of our top talent from Istanbul to Amsterdam.',
     ],
-    location: 'Amsterdam, NL / Istanbul, TR',
+    location: 'Amsterdam, NL',
     role: 'Director of Engineering',
     startDate: new Date(2021, 11, 1),
     subRoleActual: 'Market tribe & Cross Domain tribe',
@@ -107,7 +107,7 @@ export const experiences: Experience[] = [
       'Championed continuous delivery and DevOps practices, enabling the team to ship features at high velocity during a period of extreme growth.',
       'Established new engineering hub in Amsterdam, moving an initial group of ~30 of our top talent from Istanbul to Amsterdam.',
     ],
-    location: 'Amsterdam, NL / Istanbul, TR',
+    location: 'Istanbul, TR',
     role: 'Director of Engineering',
     startDate: new Date(2021, 3, 1),
     subRoleActual: 'Cross Domain tribe',
@@ -116,7 +116,7 @@ export const experiences: Experience[] = [
   },
   {
     companyName: 'SnappCar',
-    endDate: new Date(2021, 3, 31),
+    endDate: new Date(2021, 3, 30),
     highlights: [
       "Leader of the Engineering team for SnapCar's ride-hailing platform, responsible for product development and scaling technology.",
       'Delivered new mobile and web experiences that drove significant user adoption in a competitive urban mobility market.',

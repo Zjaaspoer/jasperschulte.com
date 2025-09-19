@@ -13,11 +13,12 @@ import Podcast from "./podcast/Podcast";
 import Education from "./education/Education";
 import ScrollToTopButton from "./topbutton/Top";
 import Twitter from "./twitter-embed/twitter";
-import Profile from "./profile/Profile";
 import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
+import "../components/footer/Footer";
+import "./profile/Profile";
 import "./Main.scss";
 
 const Main = () => {
@@ -62,7 +63,7 @@ const Main = () => {
             <Talks />
             <Twitter />
             <Podcast />
-            <Profile />
+            {/* <Profile /> */}
             {/* <Footer /> */}
             <ScrollToTopButton />
           </>

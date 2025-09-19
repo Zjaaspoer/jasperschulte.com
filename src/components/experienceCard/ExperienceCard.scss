@@ -121,6 +121,57 @@
   margin-top: 2rem;
 }
 
+.experience-description-container {
+  position: relative;
+  max-height: 50rem;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+
+  &.collapsed {
+    max-height: 10rem;
+  }
+}
+
+.experience-fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2rem;
+  background: linear-gradient(transparent, $lightBackground2);
+  pointer-events: none;
+}
+
+.experience-card-dark .experience-fade-overlay {
+  background: linear-gradient(transparent, $darkBackground);
+}
+
+.experience-toggle-btn {
+  background: none;
+  border: none;
+  color: $textColor;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $textColorDark;
+  }
+
+  &.dark-mode {
+    color: $textColorDark;
+
+    &:hover {
+      color: $textColor;
+    }
+  }
+}
+
 /* Media Query */
 
 @media (max-width: 1380px) {

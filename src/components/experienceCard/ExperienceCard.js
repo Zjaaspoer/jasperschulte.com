@@ -4,6 +4,7 @@ import ColorThief from "colorthief";
 
 export default function ExperienceCard({cardInfo, isDark}) {
   const [colorArrays, setColorArrays] = useState([]);
+  const [isExpanded, setIsExpanded] = useState(false);
   const imgRef = createRef();
 
   function getColorArrays() {
@@ -16,6 +17,10 @@ export default function ExperienceCard({cardInfo, isDark}) {
       ? null
       : "rgb(" + values.join(", ") + ")";
   }
+
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   const GetDescBullets = ({descBullets, isDark}) => {
     return descBullets
@@ -75,9 +80,18 @@ export default function ExperienceCard({cardInfo, isDark}) {
         >
           {cardInfo.desc}
         </p>
-        <ul>
-          <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
-        </ul>
+        <div className={`experience-description-container ${!isExpanded ? 'collapsed' : ''}`}>
+          <ul>
+            <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
+          </ul>
+          {!isExpanded && <div className="experience-fade-overlay"></div>}
+        </div>
+        <button 
+          className={`experience-toggle-btn ${isDark ? 'dark-mode' : ''}`}
+          onClick={toggleExpanded}
+        >
+          {isExpanded ? 'collapse...' : 'read more...'}
+        </button>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ import {camelCase, chain, first, last} from "lodash";
 // @ts-ignore - Parameter type not needed in JS file
 const getCompanyLogo = companyName => {
   try {
-    return require(`./assets/images/${camelCase(companyName)}Logo.png`)
+    return require(`./assets/images/${camelCase(companyName)}Logo.webp`)
   } catch (error) {
     if (String(error).startsWith("Error: Cannot find module '")) {
       console.warn(companyName)
@@ -66,8 +66,19 @@ const portfolio = {
   workExperiences: {
     display: true,
     experience: chain(content.experiences)
-      .orderBy(e => Number(e.startDate), 'desc')
-      .groupBy(e => e.companyName)
+      .orderBy(e => {
+        if (e.role.toLowerCase().includes('engineering leader')) {
+          return 9999999999999
+        }
+        return Number(e.startDate)
+      }, 'desc')
+      .groupBy((e) => {
+        console.log(e.companyName, e.companyName === 'jasperschulte.com')
+        if (e.companyName === 'jasperschulte.com') {
+          return Math.random()
+        }
+        return e.companyName
+      })
       .map(eS => {
         return {
           company: first(eS).companyName,
@@ -116,7 +127,7 @@ const portfolio = {
     display: false
   },
   contactInfo: {
-    title: emoji("Contact Me ☎️"),
+    title: emoji("Contact Me"),
     subtitle:
       "Discuss a project or just want to say hi? My Inbox is open for all.",
     email_address: "<firstname>@<firstname><lastname>.com"

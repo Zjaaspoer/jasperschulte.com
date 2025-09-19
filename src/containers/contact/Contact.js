@@ -41,18 +41,18 @@ export default function Contact() {
                   <br />
                 </>
               )}
-              <a
+              {/* <a
                 className="contact-detail-email"
                 href={"mailto:" + contactInfo.email_address}
-              >
+              > */}
                 {contactInfo.email_address}
-              </a>
+              {/* </a> */}
               <br />
               <br />
               <SocialMedia />
             </div>
           </div>
-          <div className="contact-image-div">
+          {/* <div className="contact-image-div">
             {illustration.animated ? (
               <DisplayLottie animationData={email} />
             ) : (
@@ -61,7 +61,7 @@ export default function Contact() {
                 src={require("../../assets/images/contactMailDark.svg")}
               ></img>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </Fade>

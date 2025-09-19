@@ -18,7 +18,7 @@ import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
 import "../components/footer/Footer";
-import "./profile/Profile";
+import Contact from "./contact/Contact";
 import "./Main.scss";
 
 const Main = () => {
@@ -64,6 +64,7 @@ const Main = () => {
             <Twitter />
             <Podcast />
             {/* <Profile /> */}
+            <Contact />
             {/* <Footer /> */}
             <ScrollToTopButton />
           </>

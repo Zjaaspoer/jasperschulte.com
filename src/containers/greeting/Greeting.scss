@@ -7,22 +7,21 @@
   margin-top: 4rem;
 }
 .greet-main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
+  width: 100%;
+  padding: 0;
+  margin: 0;
   margin-top: 2rem;
 }
 
 .greeting-main {
   display: flex;
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
 }
 
 .subTitle {
   color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
 }
 
 .greeting-main > * {
@@ -53,9 +52,17 @@
   line-height: 40px;
 }
 
-.greeting-image-div > img {
-  max-width: 100%;
+.greeting-image-div {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-bottom: 2rem;
+}
+
+.greeting-image-div>img {
+  width: 100%;
   height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .wave-emoji {
@@ -115,8 +122,8 @@
   .greeting-main {
     display: block;
   }
-  .greeting-image-div {
-    height: 256px;
+  .greeting-image-div>img {
+    height: auto;
   }
 }
 

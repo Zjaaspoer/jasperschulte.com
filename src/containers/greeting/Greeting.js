@@ -14,6 +14,12 @@ export default function Greeting() {
   return (
     <Fade bottom duration={1000} distance="40px">
       <div className="greet-main" id="greeting">
+        <div className="greeting-image-div">
+          <img
+            src={require("../../assets/images/profilePicture.jpg")}
+            alt="Profile"
+          />
+        </div>
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div>

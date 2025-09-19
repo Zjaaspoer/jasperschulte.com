@@ -24,7 +24,7 @@ const greeting = {
   username: "jasperschulte",
   title: "Hi, I'm Jasper",
   subTitle: emoji(
-    "Your next (fractional) CTO"
+    "Engineering Leader | Public Speaker | ex-Booking.com | ex-Tripadvisor | ex-Getir | Fractional/Interim/Permanent"
   ),
   // resumeLink:
   //   "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button

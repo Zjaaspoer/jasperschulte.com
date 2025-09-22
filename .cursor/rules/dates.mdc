@@ -1,0 +1,6 @@
+---
+description: dates
+alwaysApply: true
+---
+- prefer doing date operations with the date-fns library
+- when doing multiple operations on a date, use the flow function from lodash-es combined with date-fns/fp functional programming functions

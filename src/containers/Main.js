@@ -21,9 +21,12 @@ import "../components/footer/Footer";
 import Contact from "./contact/Contact";
 import "./Main.scss";
 
+const isDark = true;
+
 const Main = () => {
-  const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
-  const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
+  // const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
+  // const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
+  // const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
 
@@ -39,13 +42,13 @@ const Main = () => {
     }
   }, []);
 
-  const changeTheme = () => {
+  /* const changeTheme = () => {
     setIsDark(!isDark);
-  };
+  }; */
 
   return (
     <div className={isDark ? "dark-mode" : null}>
-      <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
+      <StyleProvider value={{isDark: isDark/* , changeTheme: changeTheme */}}>
         {isShowingSplashAnimation && splashScreen.enabled ? (
           <SplashScreen />
         ) : (

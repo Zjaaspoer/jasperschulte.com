@@ -39,12 +39,13 @@ export default function Greeting() {
                 <i>{greeting.subTitle}</i>
               </p>
               
-                {greeting.about.split('\n\n').map(a => <p
+                {greeting.about.split('\n\n').map((a, i) => <p
                 className={
                   isDark
                     ? "dark-mode greeting-text-p"
                     : "greeting-text-p subTitle"
                 }
+                key={i}
               >{a}</p>)}
               <div id="resume" className="empty-div"></div>
               <SocialMedia />

@@ -20,6 +20,25 @@
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
 }
 
+/* Safe CSS fade-in for iOS: element is visible by default */
+.fade-in-up {
+  will-change: opacity, transform;
+  animation: fadeInUp 700ms ease-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0.01;
+    /* not 0 to avoid Safari edge cases */
+    transform: translate3d(0, 12px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .experience-banner {
   background-position: center;
   background-repeat: no-repeat;

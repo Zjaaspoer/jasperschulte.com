@@ -8,13 +8,20 @@ export default function ExperienceCard({cardInfo, isDark}) {
   const imgRef = createRef();
 
   function getColorArrays() {
-    const colorThief = new ColorThief();
-    setColorArrays(colorThief.getColor(imgRef.current));
+    try {
+      const colorThief = new ColorThief();
+      const colors = colorThief.getColor(imgRef.current);
+      setColorArrays(colors);
+    } catch (error) {
+      // Fallback for iOS Safari CORS issues or other ColorThief failures
+      console.warn('ColorThief failed to extract colors, using fallback:', error);
+      setColorArrays([100, 100, 100]); // Default gray color
+    }
   }
 
   function rgb(values) {
-    return typeof values === "undefined"
-      ? null
+    return typeof values === "undefined" || !values || values.length === 0
+      ? "rgb(100, 100, 100)" // Default gray fallback
       : "rgb(" + values.join(", ") + ")";
   }
 
@@ -36,7 +43,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
   };
 
   return (
-    <div className={isDark ? "experience-card-dark" : "experience-card"}>
+    <div className={(isDark ? "experience-card-dark" : "experience-card") + " fade-in-up"}>
       <div style={{background: rgb(colorArrays)}} className="experience-banner">
         <div className="experience-blurred_div"></div>
         <div className="experience-div-company">
@@ -50,6 +57,10 @@ export default function ExperienceCard({cardInfo, isDark}) {
           src={cardInfo.companylogo}
           alt={cardInfo.company}
           onLoad={() => getColorArrays()}
+          onError={() => {
+            // Fallback when image fails to load
+            setColorArrays([100, 100, 100]);
+          }}
         />
       </div>
       <div className="experience-text-details">

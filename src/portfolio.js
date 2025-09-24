@@ -43,7 +43,7 @@ const portfolio = {
     display: true
   },
   splashScreen: {
-    enabled: true,
+    enabled: false,
     animation: splashAnimation,
     duration: 2000
   },
@@ -73,7 +73,6 @@ const portfolio = {
         return Number(e.startDate)
       }, 'desc')
       .groupBy((e) => {
-        console.log(e.companyName, e.companyName === 'jasperschulte.com')
         if (e.companyName === 'jasperschulte.com') {
           return Math.random()
         }

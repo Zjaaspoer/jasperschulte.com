@@ -1,0 +1,51 @@
+.fractional-leadership-heading {
+    font-size: 56px;
+    font-weight: 400;
+}
+
+.fractional-leadership-container {
+    display: flex;
+    width: 90%;
+    padding: 20px 10px;
+    margin: 0px auto;
+    margin-top: 2rem;
+}
+
+.fractional-leadership-container>* {
+    flex: 1;
+}
+
+.fractional-leadership-content {
+    margin-top: 2rem;
+}
+
+.fractional-leadership-paragraph {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Media Query */
+
+@media (max-width: 1380px) {
+    .fractional-leadership-heading {
+        font-size: 40px;
+    }
+
+    .fractional-leadership-paragraph {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fractional-leadership-heading {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .fractional-leadership-paragraph {
+        font-size: 14px;
+        text-align: left;
+    }
+}

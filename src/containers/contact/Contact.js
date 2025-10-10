@@ -6,6 +6,7 @@ import {Fade} from "react-reveal";
 import email from "../../assets/lottie/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
+import termsAndConditions from "../../assets/documents/algemene_voorwaarden_rev_250501.pdf";
 
 export default function Contact() {
   const {isDark} = useContext(StyleContext);
@@ -50,6 +51,16 @@ export default function Contact() {
               <br />
               <br />
               <SocialMedia />
+              <br />
+              <br />
+              <a
+                className="contact-terms-link"
+                href={termsAndConditions}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms and Conditions
+              </a>
             </div>
           </div>
           {/* <div className="contact-image-div">

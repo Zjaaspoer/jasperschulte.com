@@ -5,7 +5,8 @@ import "./Header.scss";
 import StyleContext from "../../contexts/StyleContext";
 import {
   greeting,
-  // workExperiences,
+  workExperiences,
+  fractionalLeadership,
   skillsSection,
   openSource,
   blogSection,
@@ -16,7 +17,9 @@ import {
 
 function Header() {
   const {isDark} = useContext(StyleContext);
-  // const viewExperience = workExperiences.display;
+  const viewGreeting = greeting.displayGreeting;
+  const viewExperience = workExperiences.display;
+  const viewFractionalLeadership = fractionalLeadership.display;
   const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
   const viewAchievement = achievementSection.display;
@@ -46,11 +49,21 @@ function Header() {
               <a href="#skills">Skills</a>
             </li>
           )}
-          {/* {viewExperience && (
+          {viewGreeting && (
             <li>
-              <a href="#experience">Work Experiences</a>
+              <a href="#greeting">Hi!</a>
             </li>
-          )} */}
+          )}
+          {viewExperience && (
+            <li>
+              <a href="#experience">Experience</a>
+            </li>
+          )}
+          {viewFractionalLeadership && (
+            <li>
+              <a href="#fractionalLeadership">Fractional Leadership</a>
+            </li>
+          )}
           {viewOpenSource && (
             <li>
               <a href="#opensource">Open Source</a>
@@ -76,9 +89,9 @@ function Header() {
               <a href="#resume">Resume</a>
             </li>
           )}
-          {/* <li>
+          <li>
             <a href="#contact">Contact Me</a>
-          </li> */}
+          </li>
           {/* <li>
             <a>
               <ToggleSwitch />

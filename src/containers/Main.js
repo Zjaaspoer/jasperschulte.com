@@ -4,6 +4,7 @@ import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
 import StackProgress from "./skillProgress/skillProgress";
 import WorkExperience from "./workExperience/WorkExperience";
+import FractionalLeadership from "./fractionalLeadership/FractionalLeadership";
 import Projects from "./projects/Projects";
 import StartupProject from "./StartupProjects/StartupProject";
 import Achievement from "./achievement/Achievement";
@@ -16,7 +17,6 @@ import Twitter from "./twitter-embed/twitter";
 import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
-import {useLocalStorage} from "../hooks/useLocalStorage";
 import "../components/footer/Footer";
 import Contact from "./contact/Contact";
 import "./Main.scss";
@@ -59,6 +59,7 @@ const Main = () => {
             <StackProgress />
             <Education />
             <WorkExperience />
+            <FractionalLeadership />
             <Projects />
             <StartupProject />
             <Achievement />

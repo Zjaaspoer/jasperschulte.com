@@ -14,7 +14,7 @@ export default function Projects() {
   // todo: remove useContex because is not supported
   const {isDark} = useContext(StyleContext);
 
-  useEffect(() => {
+  /* useEffect(() => {
     const getRepoData = () => {
       fetch("/profile.json")
         .then(result => {
@@ -34,7 +34,7 @@ export default function Projects() {
         });
     };
     getRepoData();
-  }, []);
+  }, []); */
 
   function setrepoFunction(array) {
     setrepo(array);

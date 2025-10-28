@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.644c36e3.css",
-    "main.js": "/static/js/main.cd5046f6.js",
+    "main.js": "/static/js/main.028fff04.js",
     "static/css/64.bba8fa55.chunk.css": "/static/css/64.bba8fa55.chunk.css",
     "static/js/64.51f48028.chunk.js": "/static/js/64.51f48028.chunk.js",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
     "static/media/profilePicture.jpg": "/static/media/profilePicture.00afb86f61980dfbed14.jpg",
     "static/media/jasperschulteComLogo.webp": "/static/media/jasperschulteComLogo.73b0dce7a77110b53089.webp",
-    "static/media/algemene_voorwaarden_rev_250501.pdf": "/static/media/algemene_voorwaarden_rev_250501.3ab1ac285424aaff143f.pdf",
+    "static/media/algemene_voorwaarden_rev_251101.pdf": "/static/media/algemene_voorwaarden_rev_251101.35ef823dec807db82b39.pdf",
     "static/media/developerActivity.svg": "/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
     "static/media/googleAssistantLogo.webp": "/static/media/googleAssistantLogo.f720c71652579588524a.webp",
     "static/media/getirLogo.webp": "/static/media/getirLogo.11ffe7199908e7762859.webp",
@@ -26,12 +26,12 @@
     "index.html": "/index.html",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.644c36e3.css.map": "/static/css/main.644c36e3.css.map",
-    "main.cd5046f6.js.map": "/static/js/main.cd5046f6.js.map",
+    "main.028fff04.js.map": "/static/js/main.028fff04.js.map",
     "64.bba8fa55.chunk.css.map": "/static/css/64.bba8fa55.chunk.css.map",
     "64.51f48028.chunk.js.map": "/static/js/64.51f48028.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.644c36e3.css",
-    "static/js/main.cd5046f6.js"
+    "static/js/main.028fff04.js"
   ]
 }

@@ -7,5 +7,6 @@ alwaysApply: true
 - use `logger.verbose` for big steps
 - use `logger.silly` for very small steps or steps that repeat often (e.g. in loops)
 - comments should start in lowercase
+- when logging using the `src/customLib/logger/` library, only the string in the first argument is logged, so the second argument should not be used for that purpose
 
 @src/customLib/logger/

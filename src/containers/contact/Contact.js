@@ -6,7 +6,7 @@ import {Fade} from "react-reveal";
 import email from "../../assets/lottie/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
-import termsAndConditions from "../../assets/documents/algemene_voorwaarden_rev_251101.pdf";
+import termsAndConditions from "../../assets/documents/algemene_voorwaarden_rev_251115.pdf";
 
 export default function Contact() {
   const {isDark} = useContext(StyleContext);

@@ -2,7 +2,8 @@ export interface Experience {
   readonly companyName: string
   readonly endDate: Date | null
   readonly highlights: string[]
-  // hidden experiences stay in the source but are left out of every public surface (website, resume, linkedin)
+  // hidden experiences live in `hiddenExperiences.ts`, which is never copied to the website repo, so they stay out of
+  // its public bundle; every public surface (website, resume, linkedin) leaves them out
   readonly isHidden?: boolean
   readonly location: string | null
   readonly role: string
@@ -18,6 +19,10 @@ export const experiences: Experience[] = [
     endDate: new Date(2026, 8, 30),
     highlights: [
       'Bol.com is the largest digital commerce platform in the Benelux and the region’s main competitor to Amazon, powering a marketplace ecosystem used by millions of consumers and tens of thousands of sellers across North-Western Europe.',
+      'As Head of Engineering, set technical direction and engineering standards for the teams in scope.',
+      'Partnered with product and business leadership on priorities, roadmap and organizational design, translating strategy into engineering execution.',
+      'Strengthened delivery and quality by sharpening ways of working, ownership and engineering practices across teams.',
+      'Coached engineering managers and senior engineers, building leadership capacity within the organization.',
     ],
     location: 'Utrecht, NL',
     role: 'Head of Engineering (Fractional)',
@@ -47,18 +52,6 @@ export const experiences: Experience[] = [
     subRoleActual: null,
     subRoleOptimized: null,
     url: 'https://justrussel.com/',
-  },
-  {
-    companyName: 'Salesbuildr',
-    endDate: new Date(2026, 1, 28),
-    highlights: [],
-    isHidden: true,
-    location: 'Amsterdam, NL',
-    role: 'CTO (Fractional)',
-    startDate: new Date(2025, 11, 1),
-    subRoleActual: null,
-    subRoleOptimized: null,
-    url: 'https://salesbuildr.com',
   },
   {
     companyName: 'Booking.com',

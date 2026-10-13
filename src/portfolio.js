@@ -1,7 +1,10 @@
 import emoji from "react-easy-emoji";
 // @ts-ignore - Module declaration not being picked up by TypeScript
 import splashAnimation from "./assets/lottie/splashAnimation"; // Rename to your file name for custom animation
-import {content} from "./customLib/jasperschulte-com/content";
+// only the public parts are imported: importing the whole content object put the lead notes, ai context and common
+// questions into the public bundle
+import {experiences} from "./customLib/jasperschulte-com/content/experiences";
+import {pitch} from "./customLib/jasperschulte-com/content/pitch";
 import {format} from "date-fns";
 // @ts-ignore - Module declaration not being picked up by TypeScript
 import {camelCase, chain, first, last} from "lodash";
@@ -33,10 +36,10 @@ const portfolio = {
     animated: true
   },
   greeting: {
-    about: content.pitch.elevatorPitch,
+    about: pitch.elevatorPitch,
     username: "jasperschulte",
     title: "Hi, I'm Jasper",
-    subTitle: emoji(content.pitch.label),
+    subTitle: emoji(pitch.label),
     displayGreeting: true
   },
   socialMediaLinks: {
@@ -66,7 +69,7 @@ const portfolio = {
   },
   workExperiences: {
     display: true,
-    experience: chain(content.experiences)
+    experience: chain(experiences)
       // @ts-ignore - Parameter type not needed in JS file
       .filter(e => e.isHidden !== true)
       // @ts-ignore - Parameter type not needed in JS file

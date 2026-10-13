@@ -1,5 +1,5 @@
 export const pitch = {
-  elevatorPitch: `I'm an Engineering Leader with over 20 years of experience scaling technology organizations and platforms across enterprises, hypergrowth scale-ups, and startups. I've led engineering teams of 10 to 150+ people at Booking.com, Getir, Tripadvisor, SnappCar, and beyond—helping organizations grow from a few dozen to hundreds of engineers while keeping delivery speed, quality, and culture intact.
+  elevatorPitch: `I'm an Engineering Leader with over 20 years of experience scaling technology organizations and platforms across enterprises, hypergrowth scale-ups, and startups. I've led engineering teams of 10 to 150+ people at Bol.com, Booking.com, Getir, Tripadvisor, SnappCar, and beyond—helping organizations grow from a few dozen to hundreds of engineers while keeping delivery speed, quality, and culture intact.
 
 My sweet spot is building scalable solutions for complex problems: from modernizing core platforms at one of the world's highest-traffic websites, to structuring engineering teams during hypergrowth, to setting up sustainable practices in scale-ups with a few hundred employees. I combine technical depth with organizational leadership, enabling companies to ship faster, build resilient systems, and unlock long-term value.
 

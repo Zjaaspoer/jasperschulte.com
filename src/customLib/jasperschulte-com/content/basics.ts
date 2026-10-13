@@ -1,6 +1,6 @@
 export const basics = {
-  city: 'Amsterdam',
-  countryCode: 'NL',
+  city: 'Barcelona',
+  countryCode: 'ES',
   email: 'jasper@jasperschulte.com',
   firstName: 'Jasper',
   lastName: 'Schulte',

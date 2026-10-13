@@ -2,6 +2,8 @@ export interface Experience {
   readonly companyName: string
   readonly endDate: Date | null
   readonly highlights: string[]
+  // hidden experiences stay in the source but are left out of every public surface (website, resume, linkedin)
+  readonly isHidden?: boolean
   readonly location: string | null
   readonly role: string
   readonly startDate: Date
@@ -12,8 +14,55 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    companyName: 'Bol.com',
+    endDate: new Date(2026, 8, 30),
+    highlights: [
+      'Bol.com is the largest digital commerce platform in the Benelux and the region’s main competitor to Amazon, powering a marketplace ecosystem used by millions of consumers and tens of thousands of sellers across North-Western Europe.',
+    ],
+    location: 'Utrecht, NL',
+    role: 'Head of Engineering (Fractional)',
+    startDate: new Date(2025, 11, 1),
+    subRoleActual: null,
+    subRoleOptimized: null,
+    url: 'https://bol.com/',
+  },
+  {
+    companyName: 'Stealth Startup',
+    endDate: new Date(2026, 8, 30),
+    highlights: [],
+    location: 'Paris, FR',
+    role: 'CTO (Fractional)',
+    startDate: new Date(2025, 10, 1),
+    subRoleActual: null,
+    subRoleOptimized: null,
+    url: 'https://www.linkedin.com/in/jasperschulte/',
+  },
+  {
+    companyName: 'Just Russel',
+    endDate: null,
+    highlights: [],
+    location: 'Ghent, BE',
+    role: 'Mentor for technical leadership',
+    startDate: new Date(2025, 10, 1),
+    subRoleActual: null,
+    subRoleOptimized: null,
+    url: 'https://justrussel.com/',
+  },
+  {
+    companyName: 'Salesbuildr',
+    endDate: new Date(2026, 1, 28),
+    highlights: [],
+    isHidden: true,
+    location: 'Amsterdam, NL',
+    role: 'CTO (Fractional)',
+    startDate: new Date(2025, 11, 1),
+    subRoleActual: null,
+    subRoleOptimized: null,
+    url: 'https://salesbuildr.com',
+  },
+  {
     companyName: 'Booking.com',
-    endDate: new Date(2025, 8, 31),
+    endDate: new Date(2025, 6, 31),
     highlights: [
       "Leader of the Web Platform & Mobile App Platform track (headcount ~150), accountable for the architecture, scalability, and developer experience of Booking.com's core user platforms.",
       'Spearheaded modernization of the website and app platforms, driving improvements in performance, accessibility, and velocity across global product teams.',
@@ -48,7 +97,7 @@ export const experiences: Experience[] = [
   },
   {
     companyName: 'jasperschulte.com',
-    endDate: null,
+    endDate: new Date(2026, 8, 30),
     highlights: [
       "Operating via jasperschulte.com, I've delivered (fractional/interim) engineering leadership for multiple organizations.",
     ],

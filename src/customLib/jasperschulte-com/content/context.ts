@@ -1,10 +1,10 @@
 export const context = {
   factsAboutMe: `- I am a male.
 - I was born on September 30, 1982.
-- I live in Amsterdam, The Netherlands.
+- I live in Barcelona, Spain.
 - I am a Dutch citizen.`,
   into: `This text is about me, Jasper Schulte and my business ambitions.
-I left Booking in May 1st 2025 and am planning to offer my services as a Engineering leader.
+After leaving Booking.com in 2025, I worked as a fractional engineering leader (Head of Engineering at bol.com, CTO at a stealth startup) until September 2026. I am now looking for a permanent engineering leadership role (CTO, VP of Engineering, Director or Head of Engineering).
 This should provide context about
 - My background, history, experience and achievements
 - What services and value I can offer

@@ -64,7 +64,6 @@ export const arbor: Lead = {
   ],
   // prettier-ignore
   todos: [
-    /* eslint-disable sort-keys-fix/sort-keys-fix */
     { type: 'uncategorized',  description: '[general] todo: generate a clear story how i work together with product' },
     { type: 'uncategorized',  description: 'todo: generate a story how to approach damien being away from the team' },
     { type: 'uncategorized',  description: '[general] todo: generate an answer to how i can be inspirational and aspirational' },
@@ -83,7 +82,6 @@ export const arbor: Lead = {
     { type: 'uncategorized',  description: '[general] todo: based on job description, ask chat gpt to generate 10 examples from my past questions and answer them' },
     { type: 'uncategorized',  description: '[general] todo: generate different queries: e.g. what are gaps between my experience and this job OR where can i excel in this job?' },
     { type: 'uncategorized',  description: '[general] todo: generate logic to differentiate between asking chatgpt to just generate text vs go into a back and forth (like the current output)' },
-    /* eslint-enable sort-keys-fix/sort-keys-fix */
   ],
   url: 'https://arbor-education.com/',
 }

@@ -5,7 +5,7 @@ My sweet spot is building scalable solutions for complex problems: from moderniz
 
 What sets me apart is how I lead: with transparency, trust, and clarity. I make complex transformations tangible, coach future leaders, and create cultures where teams feel empowered to own their outcomes. Outside of work, I'm also a public speaker at international conferences, sharing insights on platform architecture, engineering culture, and scaling organizations.
 
-I offer my services primarily as a fractional or interim engineering leader—helping organizations navigate growth, transformation, and scale. I'm also open to permanent opportunities where the circumstances and fit are right. If you're facing complex challenges in engineering, product, or platform, I'd love to connect.`,
+I'm looking for a permanent engineering leadership role—CTO, VP of Engineering, Director or Head of Engineering—where I can help an organization navigate growth, transformation, and scale. If you're facing complex challenges in engineering, product, or platform, I'd love to connect.`,
   label:
-    'Engineering Leader | Public Speaker | ex-Booking.com | ex-Tripadvisor | ex-Getir | Fractional/Interim/Permanent',
+    'Engineering Leader | Public Speaker | ex-Booking.com | ex-Tripadvisor | ex-Getir | ex-Bol.com | jasperschulte.com',
 }

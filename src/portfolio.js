@@ -68,6 +68,8 @@ const portfolio = {
     display: true,
     experience: chain(content.experiences)
       // @ts-ignore - Parameter type not needed in JS file
+      .filter(e => e.isHidden !== true)
+      // @ts-ignore - Parameter type not needed in JS file
       .orderBy(e => {
         if (e.role.toLowerCase().includes('engineering leader')) {
           return 9999999999999
@@ -96,7 +98,7 @@ const portfolio = {
       .value(),
   },
   fractionalLeadership: {
-    display: true,
+    display: false,
     title: "Fractional Leadership",
     paragraphs: [
       'A Fractional Leader brings executive-level experience to a company part-time — offering strategy, structure, and leadership without the cost or permanence of a full-time hire.',

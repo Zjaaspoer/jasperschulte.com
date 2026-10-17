@@ -19,7 +19,7 @@ export const experiences: Experience[] = [
     endDate: null,
     highlights: [
       'Bol.com is the largest digital commerce platform in the Benelux and the region’s main competitor to Amazon, powering a marketplace ecosystem used by millions of consumers and tens of thousands of sellers across North-Western Europe.',
-      'As Head of Engineering, set technical direction and engineering standards for the teams in scope.',
+      'As Head of Engineering, set technical direction and engineering standards.',
       'Partnered with product and business leadership on priorities, roadmap and organizational design, translating strategy into engineering execution.',
       'Strengthened delivery and quality by sharpening ways of working, ownership and engineering practices across teams.',
       'Coached engineering managers and senior engineers, building leadership capacity within the organization.',

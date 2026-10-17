@@ -4,6 +4,7 @@ import { commonQuestions } from './content/commonQuestions'
 import { context } from './content/context'
 import { educations } from './content/educations'
 import { experiences } from './content/experiences'
+import { hiddenExperiences } from './content/hiddenExperiences'
 import { leads } from './content/leads'
 import { pitch } from './content/pitch'
 
@@ -13,7 +14,7 @@ export const content = {
   commonQuestions,
   context,
   educations,
-  experiences,
+  experiences: [...experiences, ...hiddenExperiences],
   leads,
   pitch,
 }

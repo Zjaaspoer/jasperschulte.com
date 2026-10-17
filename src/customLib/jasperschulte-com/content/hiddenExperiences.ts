@@ -1,4 +1,4 @@
-import { Experience } from './experiences.js'
+import { Experience } from './experiences'
 
 // kept for the record but never public. this file is deliberately not synced to the jasperschulte.com repo: whatever
 // that repo imports ends up in its public javascript bundle, even when it is filtered out at render time

@@ -74,8 +74,10 @@ const portfolio = {
       .filter(e => e.isHidden !== true)
       // @ts-ignore - Parameter type not needed in JS file
       .orderBy(e => {
-        if (e.role.toLowerCase().includes('engineering leader')) {
-          return 9999999999999
+        // jasper's chosen order (2026-11-09): public speaker sits between getir and snappcar, so it sorts as if it
+        // started just before getir rather than by its real 2019 start date
+        if (e.companyName === 'jasperschulte.com' && e.role === 'Public Speaker') {
+          return Number(new Date(2021, 2, 31))
         }
         return Number(e.startDate)
       }, 'desc')

@@ -3,6 +3,8 @@ export const pitch = {
 
 My sweet spot is building scalable solutions for complex problems: from modernizing core platforms at one of the world's highest-traffic websites, to structuring engineering teams during hypergrowth, to setting up sustainable practices in scale-ups with a few hundred employees. I combine technical depth with organizational leadership, enabling companies to ship faster, build resilient systems, and unlock long-term value.
 
+Over the last year I've been very hands-on again through AI, as a senior engineering leader: rolling out AI-assisted development at Booking.com and Bol.com, setting up AI software factories with spec-driven workflows and automated quality gates, and building AI systems that take real decisions in production.
+
 What sets me apart is how I lead: with transparency, trust, and clarity. I make complex transformations tangible, coach future leaders, and create cultures where teams feel empowered to own their outcomes. Outside of work, I'm also a public speaker at international conferences, sharing insights on platform architecture, engineering culture, and scaling organizations.
 
 I'm looking for a permanent engineering leadership role—CTO, VP of Engineering, Director or Head of Engineering—where I can help an organization navigate growth, transformation, and scale. If you're facing complex challenges in engineering, product, or platform, I'd love to connect.`,
